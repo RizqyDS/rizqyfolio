@@ -37,6 +37,30 @@ const info = [
 import { motion } from "framer-motion";
 
 const Contact = () => {
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "eb7d79fb-5ce8-4878-ae92-525aeb178222");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -45,6 +69,7 @@ const Contact = () => {
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
       className="py-6"
+      
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
@@ -55,10 +80,10 @@ const Contact = () => {
               <p className="text-white/60">Lorem Ipsum dolor sit amet</p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email Address" />
-                <Input type="phone" placeholder="Phone number" />
+                <Input type="firstname" placeholder="Firstname" name="firstname" />
+                <Input type="lastname" placeholder="Lastname" name="lastname" />
+                <Input type="email" placeholder="Email Address" name="email" />
+                <Input type="phone" placeholder="Phone number" name="phone" />
               </div>
               {/* select */}
               <Select>
@@ -78,9 +103,10 @@ const Contact = () => {
               <Textarea
                 className="h-[200px]"
                 placeholder="Type your message here."
+                name="message"
               />
               {/* btn */}
-              <Button size="md" className="max-w-40">
+              <Button size="md" className="max-w-40" onSubmit={onSubmit}>
                 Send Message
               </Button>
             </form>

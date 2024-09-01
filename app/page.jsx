@@ -26,6 +26,7 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
+                path="https://drive.google.com/file/d/15LLwBLLiNGdOu9HmRsgoQP-kEZgsGC5c/view?usp=sharing"
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
