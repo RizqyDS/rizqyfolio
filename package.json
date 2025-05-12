@@ -13,13 +13,13 @@
     "@radix-ui/react-tabs": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.4.7",
     "locomotive-scroll": "^5.0.0-beta.21",
     "lucide-react": "^0.472.0",
-    "motion": "^12.0.0-alpha.2",
-    "next": "15.0.4",
-    "react": "^19.0.0",
+    "next": "14.2.14",
+    "react": "^18",
     "react-countup": "^6.5.3",
-    "react-dom": "^19.0.0",
+    "react-dom": "^18",
     "react-icons": "^5.4.0",
     "react-responsive": "^10.0.0",
     "react-scroll": "^1.9.0",
@@ -29,7 +29,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@types/react": "^19.0.1",
+    "@types/react": "^18",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
   }
