@@ -43,10 +43,16 @@ const data = [
     title: "Furniture Mobile Design",
   },
   {
-    href: "https://www.triartha.com/",
+    href: "https://dribbble.com/shots/22932082-Precise-Furniture-Store-Mobile-App",
+    category: "design",
+    img: "/assets/work/design-6.png",
+    title: "Furniture Mobile Design",
+  },
+  {
+    href: "https://www.saigonbeautysurgery.com/",
     category: "frontend",
-    img: "/assets/work/frontend-5.png",
-    title: "Company Profile Website",
+    img: "/assets/work/frontend-6.png",
+    title: "Beauty Surgery Website",
   },
   {
     href: "https://storegg-puce.vercel.app",
