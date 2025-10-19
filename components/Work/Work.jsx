@@ -55,6 +55,12 @@ const data = [
     title: "Beauty Surgery Website",
   },
   {
+    href: "https://www.triartha.com/",
+    category: "frontend",
+    img: "/assets/work/frontend-5.png",
+    title: "Company Profile Website",
+  },
+  {
     href: "https://storegg-puce.vercel.app",
     category: "frontend",
     img: "/assets/work/frontend-1.png",
